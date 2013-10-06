@@ -1,7 +1,7 @@
 simple-date
 ===========
 
-A simple, elegant date website.
+A simple, elegant date website. From [this pen by Chris Nager](http://codepen.io/ChrisNager/details/ieAch).
 
 A Demo
 -----------
