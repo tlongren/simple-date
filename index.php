@@ -18,7 +18,7 @@
 
 <body>
   <script src="script.js"></script>
-  <header class="intro">It is...</header>
+  <header class="intro">Today's date is...</header>
 
   <div class="today">
       <div class="today-piece  top  day"></div>
