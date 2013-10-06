@@ -26,5 +26,24 @@
       <div class="today-piece  middle  date"></div>
       <div class="today-piece  bottom  year"></div>
   </div>
+  <script type="text/javascript" src="http://include.reinvigorate.net/re_.js"></script>
+  <script type="text/javascript">
+  try {
+  reinvigorate.track("6843y-82sp2lg6h2");
+  } catch(err) {}
+  </script>
+  <script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5251a124f5a1f56b79000042');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+  </script>
 </body>
 </html>
