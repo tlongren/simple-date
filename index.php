@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
   <header class="intro">It is...</header>
 
   <div class="today">
