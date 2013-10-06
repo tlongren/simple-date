@@ -26,6 +26,8 @@
       <div class="today-piece  middle  date"></div>
       <div class="today-piece  bottom  year"></div>
   </div>
+  <hr />
+  <span class="clock"></span>
   <script type="text/javascript" src="http://include.reinvigorate.net/re_.js"></script>
   <script type="text/javascript">
   try {

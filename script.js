@@ -27,18 +27,18 @@ function DateTime() {
                 break;
         };
     };
-
+ 
     this.getDoY = function(a) {
         var b = new Date(a.getFullYear(),0,1);
     return Math.ceil((a - b) / 86400000);
     }
-
+ 
     this.date = arguments.length == 0 ? new Date() : new Date(arguments);
-
+ 
     this.weekdays = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
     this.months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
     this.daySuf = new Array( "st", "nd", "rd", "th" );
-
+ 
     this.day = {
         index: {
             week: "0" + this.date.getDay(),
@@ -50,14 +50,14 @@ function DateTime() {
             month: ((this.date.getDate() < 10) ? "0" + this.date.getDate() : this.date.getDate()) + getDaySuffix(this.date.getDate())
         }
     }
-
+ 
     this.month = {
         index: (this.date.getMonth() + 1) < 10 ? "0" + (this.date.getMonth() + 1) : this.date.getMonth() + 1,
         name: this.months[this.date.getMonth()]
     };
-
+ 
     this.year = this.date.getFullYear();
-
+ 
     this.sym = {
         d: {
             d: this.date.getDate(),
@@ -73,7 +73,7 @@ function DateTime() {
             yyyy: this.date.getFullYear()
         }
     };
-
+ 
     this.formats = {
         pretty: {
           a: this.sym.d.dddd,
@@ -83,13 +83,87 @@ function DateTime() {
         }
     };
 };
-
-
+ 
 
 var dt = new DateTime();
 $('.day').text(dt.formats.pretty.a);
 $('.date').text(dt.formats.pretty.b);
 $('.month').text(dt.formats.pretty.c);
 $('.year').text(dt.formats.pretty.d);
+  
+var Clock = (function(){
 
+    var exports = function(element) {
+        this._element = element;
+        var html = '';
+        for (var i=0;i<6;i++) {
+            html += '<span>&nbsp;</span>';
+        }
+        this._element.innerHTML = html;
+        this._slots = this._element.getElementsByTagName('span');
+        this._tick();
+    };
+
+    exports.prototype = {
+
+        _tick:function() {
+            var time = new Date();
+            this._update(this._pad(time.getHours()) + this._pad(time.getMinutes()) + this._pad(time.getSeconds()));
+            var self = this;
+            setTimeout(function(){
+                self._tick();
+            },1000);
+        },
+
+        _pad:function(value) {
+            return ('0' + value).slice(-2);
+        },
+
+        _update:function(timeString) {
+
+            var i=0,l=this._slots.length,value,slot,now;
+            for (;i<l;i++) {
+
+                value = timeString.charAt(i);
+                slot = this._slots[i];
+                now = slot.dataset.now;
+
+                if (!now) {
+                    slot.dataset.now = value;
+                    slot.dataset.old = value;
+                    continue;
+                }
+
+                if (now !== value) {
+                    this._flip(slot,value);
+                }
+            }
+        },
+
+        _flip:function(slot,value) {
+
+            // setup new state
+            slot.classList.remove('flip');
+            slot.dataset.old = slot.dataset.now;
+            slot.dataset.now = value;
+
+            // force dom reflow
+            slot.offsetLeft;
+
+            // start flippin
+            slot.classList.add('flip');
+
+        }
+
+    };
+
+    return exports;
+}());
+
+var i=0,clocks = document.querySelectorAll('.clock'),l=clocks.length;
+for (;i<l;i++) {
+    new Clock(clocks[i]);
+}
+
+ 
 });
