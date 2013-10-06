@@ -3,6 +3,10 @@ simple-date
 
 A simple, elegant date website.
 
+A Demo
+-----------
+You can find a demo at http://date.longren.org/. It's hosted on Heroku!
+
 A Screenshot
 -----------
 
