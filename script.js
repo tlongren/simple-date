@@ -4,7 +4,7 @@
  * Thanks, SpYk3HH for your sweet fiddlin'.
  * http://jsfiddle.net/SpYk3/rYzAY/
  */
-
+$( document ).ready(function() {
 function DateTime() {
     function getDaySuffix(a) {
         var b = "" + a,
@@ -91,3 +91,5 @@ $('.day').text(dt.formats.pretty.a);
 $('.date').text(dt.formats.pretty.b);
 $('.month').text(dt.formats.pretty.c);
 $('.year').text(dt.formats.pretty.d);
+
+});
