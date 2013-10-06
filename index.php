@@ -28,5 +28,7 @@
   </div>
   <hr />
   <span class="clock"></span>
+
+  <span class="github"><iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=simple-date&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=simple-date&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe></span>
 </body>
 </html>
