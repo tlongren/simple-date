@@ -1,0 +1,85 @@
+/* Base
+   -------------------------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Kite+One);
+@import url(http://fonts.googleapis.com/css?family=Voltaire);
+html {
+    max-width: 23em;
+    margin: 0 auto;
+    padding: 1.25em;
+    font: 1.4em 'Kite One', sans-serif;
+    text-align: center;
+    color: #222;
+    background: #e2e7e8;
+}
+a {
+    color: #d74435;
+}
+a:hover,
+a:focus {
+    color: #e94939;
+}
+
+/* Intro
+   -------------------------------------------------- */
+
+.intro {
+    font-family:'Voltaire', sans-serif;
+    margin-bottom: 0.85em;
+    border-radius: 0.25rem;
+    padding: 0.7rem;
+    font-size: 2.9em;
+    font-weight: 200;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+/* Today
+   -------------------------------------------------- */
+
+.today-piece {
+    border-radius: 0.25rem;
+    padding: 1.6rem;
+    font-size: 1.25em;
+    text-align: center;
+    background: white;
+}
+
+/* Piece positions
+   -------------------------------------------------- */
+
+.top {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.middle {
+    border-radius: 0;
+}
+.bottom {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/* Piece categories
+   -------------------------------------------------- */
+
+.day,
+.year {
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: white;
+    background: #2296cf;
+}
+.month {
+    padding-top: 1.75rem;
+    padding-bottom: 0;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+.date {
+    padding-top: 0;
+    padding-bottom: 1.75rem;
+    font-size: 3em;
+    font-weight: 100;
+}
