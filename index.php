@@ -29,6 +29,6 @@
   <hr />
   <span class="clock"></span>
 
-  <span class="github"><iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=simple-date&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=simple-date&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe></span>
+  <span class="github"><iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=simple-date&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://date.longren.org/" data-via="tlongren" data-lang="en">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> <iframe src="http://ghbtns.com/github-btn.html?user=tlongren&repo=simple-date&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe></span>
 </body>
 </html>
